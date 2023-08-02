@@ -7,9 +7,7 @@ import { formatDate } from '~/utils'
 export default function Card({ post }: { post: Post }) {
   return (
     <div className="card">
-      {!post.mainImage ? (
-        <div className="card__cover--none" />
-        ) : (
+      {post.mainImage ? (
         <Image
           className="card__cover"
           src={urlForImage(post.mainImage).width(500).height(300).url()}
@@ -17,6 +15,8 @@ export default function Card({ post }: { post: Post }) {
           width={500}
           alt=""
         />
+      ) : (
+        <div className="card__cover--none" />
       )}
       <div className="card__container">
         <h3 className="card__title">
