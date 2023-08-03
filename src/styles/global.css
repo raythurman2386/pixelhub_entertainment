@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 :root {
   --space-0: 0;
   --space-1: 4px;
@@ -398,7 +401,7 @@ main {
 }
 
 .card .card__link::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
 }
